@@ -1,0 +1,29 @@
+﻿  pch.cpp
+  Add_Friend.cpp
+  dllmain.cpp
+  FindPattern.cpp
+D:\code\C++\Socket_WX_helper\FindPattern.cpp(199,17): warning C4267: “=”: 从“size_t”转换到“short”，可能丢失数据
+  Gei_Info.cpp
+D:\code\C++\Socket_WX_helper\Gei_Info.cpp(68): warning C4405: “ret”: 标识符是保留字
+  Group.cpp
+  Hook_msg.cpp
+  HTools.cpp
+  HUtil.cpp
+  Init_Match_Pattern.cpp
+  MemOpt.cpp
+  ProcessOpt.cpp
+  PubLic.cpp
+  Send_msg.cpp
+  socketMain.cpp
+D:\code\C++\Socket_WX_helper\socketMain.cpp(13,1): warning C4005: “Log”: 宏重定义
+D:\code\C++\Socket_WX_helper\ZZHook.h(4): message : 参见“Log”的前一个定义
+D:\code\C++\Socket_WX_helper\socketMain.cpp(210,9): warning C4101: “optVal”: 未引用的局部变量
+  wxid_Get_Info.cpp
+  ZZHook.cpp
+D:\code\C++\Socket_WX_helper\ZZHook.cpp(71,11): warning C4477: “printf_s”: 格式字符串“%X”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“BYTE *”
+    正在创建库 D:\code\C++\Socket_WX_helper\Release\Socket_WX_helper.lib 和对象 D:\code\C++\Socket_WX_helper\Release\Socket_WX_helper.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 1030 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Socket_WX_helper.vcxproj -> D:\code\C++\Socket_WX_helper\Release\Socket_WX_helper.dll

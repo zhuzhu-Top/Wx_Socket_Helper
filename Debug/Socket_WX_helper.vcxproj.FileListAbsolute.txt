@@ -1,0 +1,4 @@
+D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.pdb
+D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.vcxproj.CopyComplete
+D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.dll
+D:\code\C++\Socket_WX_helper\Debug\jsoncpp.dll
