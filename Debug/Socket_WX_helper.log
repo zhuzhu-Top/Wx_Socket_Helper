@@ -1,0 +1,20 @@
+﻿  pch.cpp
+  dllmain.cpp
+  FindPattern.cpp
+D:\code\C++\Socket_WX_helper\FindPattern.cpp(199,17): warning C4267: “=”: 从“size_t”转换到“short”，可能丢失数据
+  Hook_msg.cpp
+  HTools.cpp
+  HUtil.cpp
+  Init_Match_Pattern.cpp
+  MemOpt.cpp
+  ProcessOpt.cpp
+  PubLic.cpp
+  Send_msg.cpp
+  socketMain.cpp
+D:\code\C++\Socket_WX_helper\socketMain.cpp(115,9): warning C4101: “optVal”: 未引用的局部变量
+  wxid_Get_Info.cpp
+  ZZHook.cpp
+D:\code\C++\Socket_WX_helper\ZZHook.cpp(60,11): warning C4477: “printf_s”: 格式字符串“%X”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“BYTE *”
+  正在生成代码...
+    正在创建库 D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.lib 和对象 D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.exp
+  Socket_WX_helper.vcxproj -> D:\code\C++\Socket_WX_helper\Debug\Socket_WX_helper.dll
