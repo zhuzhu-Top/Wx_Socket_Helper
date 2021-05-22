@@ -13,7 +13,7 @@
 #define Log(message) std::cout<<message<<std::endl
 #pragma warning(disable:4996)
 
-
+// jsonxx    https://github.com/Nomango/jsonxx
 #pragma comment(lib, "ws2_32.lib")
 
 
@@ -38,6 +38,9 @@ std::string Get_Group_Mem_Wxid(std::wstring RoomWxid);
 
 void Msg_main();
 
+
+
+DWORD getWeChatwinADD();
 //SOCKET Srever, Client; //创建服务端 客户端套接字
 //bool Socket_Init(char* IP, int Port);//初始化
 VOID Receive_Data(SOCKET clientSock);//接收数据
@@ -146,7 +149,30 @@ VOID Receive_Data(SOCKET clientSock)
                 break;
             }
             case 4: {//遍历二叉树获取好友列表
-                DWORD friendList_base = HTools::ReadInt(0x7A7F71AC);
+                //63F40000
+                //0x659C71AC   [0x659C71AC]
+                //    642B85B0 / $  56            push esi
+                //    642B85B1 | .  68 30369D65   push WeChatWi.659D3630; / pCriticalSection = WeChatWi.659D3630
+                //    642B85B6 | .  33F6 xor esi, esi; |
+                //    642B85B8 | .FF15 60924D65 call dword ptr ds : [<&KERNEL32.EnterCriti>; \EnterCriticalSection
+                //    642B85BE | .  66:90         nop
+                //    642B85C0 | > A0 AA719C65 / mov al, byte ptr ds : [0x659C71AA]
+                //    642B85C5 | .  84C0 | test al, al
+                //    642B85C7 | .  74 6E | je short WeChatWi.642B8637
+                //    642B85C9 | .  833D AC719C65 > | cmp dword ptr ds : [0x659C71AC] , 0x0
+                //    642B85D0 | .  74 1B | je short WeChatWi.642B85ED
+                //    642B85D2 | .  46 | inc esi
+                //    642B85D3 | .  83FE 01 | cmp esi, 0x1
+                //    642B85D6 | . ^ 7C E8         \jl short WeChatWi.642B85C0
+                //    642B85D8 | .  68 30369D65   push WeChatWi.659D3630; / pCriticalSection = WeChatWi.659D3630
+                //    642B85DD | .FF15 5C924D65 call dword ptr ds : [<&KERNEL32.LeaveCriti>; \LeaveCriticalSection
+                //    642B85E3 | .A1 AC719C65   mov eax, dword ptr ds : [0x659C71AC]
+                //    642B85E8 | .  83C0 28       add eax, 0x28
+                //    642B85EB | .  5E            pop esi;  WeChatWi.642657F4
+                //    642B85EC | .C3            retn
+
+
+                DWORD friendList_base = HTools::ReadInt(getWeChatwinADD() + 0x1A871AC);
                 DWORD m_friendList_base = friendList_base + 0x28 + 0x8C;
                 DWORD ListTop = HTools::ReadInt(m_friendList_base);
 
