@@ -8,7 +8,7 @@
 ### 主要功能:
     0.
     接收消息:
-        ![image](Static/recv_msg.png)
+        ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/recv_msg.png)
     1. 
     发送普通文本消息:
         {
