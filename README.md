@@ -57,8 +57,8 @@
         {"type": 3,"wxid":"wxid_4zr616ir6fi122",}
 
 效果演示:
+![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/wxid%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.jpg)
 
-        bbbb
 
   + 4. 遍历二叉树获取好友列表
 ```javascript
