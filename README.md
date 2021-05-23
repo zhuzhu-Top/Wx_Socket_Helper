@@ -75,6 +75,9 @@
 
 ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E5%88%97%E8%A1%A8.png)
 
+
+#### python控制台收到的并不是错误的，这个是编码后的，可以用utf8解开还原成中文，我实力太菜，就不想折腾了
+
  + 5.  通过wxid获取好友详细信息
 ```javascript
   {
