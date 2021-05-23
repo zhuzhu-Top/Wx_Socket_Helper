@@ -91,6 +91,6 @@
 
 效果演示:
 
-    ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/wxid获取详细信息.jpg)
+    ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/wxid%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.jpg)
 
 
