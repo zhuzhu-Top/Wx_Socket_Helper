@@ -1,6 +1,8 @@
 # Socket_WX_Helper
 
+## 要求
 
+    https://github.com/Nomango/jsonxx
 
 ## 项目介绍
           编译环境为VS2019 只支持微信3.2.1.112版本。会在项目右侧的Release中附上3.2.1.112微信版本的安装包，编译好的dll可在Release目录中找到。
@@ -32,10 +34,3 @@
             "NickName":"昵称"
         }
     例如:
-        bbbbbbbbbbb
-    
-        bbbbbbbbbbb        bbbbbbbbbbb        bbbbbbbbbbb
-
-                bbbbbbbbbbb        bbbbbbbbbbb        bbbbbbbbbbb
-
-                        bbbbbbbbbbb
