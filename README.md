@@ -30,13 +30,63 @@
     aaaaaaaaaaaaaaaaaaaa
 
    + 2. 发送名片
-   ```
+```javascript
     {
             "type": 2,
             "wxid":"wxid",
             "source":"源wxid",
             "NickName":"昵称"
     }
-    ```
-    例如:
-        bbbbbbbbbbbbb
+
+例如:{"type": 2,"wxid":"filehelper""source":"wxid_4zr616ir6fi122""NickName":"昵称"}
+```
+
+效果演示:
+
+        bbbb
+
+  + 3. 通过wxid获取好友详细信息
+```javascript
+  {
+    "type": 3,
+    "wxid":"wxid",
+  }
+```
+例如:
+
+        {"type": 3,"wxid":"wxid_4zr616ir6fi122",}
+
+效果演示:
+
+        bbbb
+
+  + 4. 遍历二叉树获取好友列表
+```javascript
+{
+    "type": 4,
+}
+```
+例如:
+
+        {"type": 4}
+
+效果演示:
+
+        bbbb
+
+ + 5.  通过wxid获取好友详细信息
+```javascript
+  {
+    "type": 3,
+    "wxid":"wxid",
+  }
+```
+例如:
+
+        {"type": 3,"wxid":"wxid_4zr616ir6fi122",}
+
+效果演示:
+
+        bbbb
+
+
