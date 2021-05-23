@@ -26,8 +26,8 @@
              例如:{"type":1,"wxid":"filehelper","msg":"消息内容"}
      ```        
     效果演示:
-    
-    aaaaaaaaaaaaaaaaaaaa
+![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/%E5%8F%91%E9%80%81%E6%99%AE%E9%80%9A%E6%B6%88%E6%81%AF.png)
+
 
    + 2. 发送名片
 ```javascript
@@ -43,7 +43,8 @@
 
 效果演示:
 
-        bbbb
+![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/sendxmlcard.png)
+
 
   + 3. 通过wxid获取好友详细信息
 ```javascript
@@ -72,7 +73,7 @@
 
 效果演示:
 
-        bbbb
+![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E5%88%97%E8%A1%A8.png)
 
  + 5.  通过wxid获取好友详细信息
 ```javascript
@@ -87,6 +88,6 @@
 
 效果演示:
 
-        bbbb
+    ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/wxid获取详细信息.jpg)
 
 
