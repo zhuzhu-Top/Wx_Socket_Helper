@@ -35,6 +35,8 @@ void Verify_Add_Frind(std::wstring wxid, std::wstring msg);
 void DelRoomMember(std::wstring roomid, std::wstring memberwxid);
 void AddChatroomMember(wchar_t* chatroomwxid, wchar_t* wxid);
 std::string Get_Group_Mem_Wxid(std::wstring RoomWxid);
+void CllectMoney(wchar_t* transferid, wchar_t* wxid);
+void AgreeUserRequest(wchar_t* v1, wchar_t* v2);
 
 void Msg_main();
 
@@ -199,7 +201,7 @@ VOID Receive_Data(SOCKET clientSock)
 
                 break;
             }
-            case 8:{
+            case 8:{//获取群成员
                 jsonxx::json J_Mem_Wxid;
                 std::wstring chatroomwxid = String2WString(js_content["chatroomwxid"].as_string());
                 std::string Mem_Wxid=Get_Group_Mem_Wxid(chatroomwxid);
@@ -207,6 +209,21 @@ VOID Receive_Data(SOCKET clientSock)
                 Send_Data(J_Mem_Wxid.dump());
                 break;
                   
+            }
+            case 9: {//收款
+
+                std::wstring wxid = String2WString(js_content["wxid"].as_string());
+                std::wstring transferid = String2WString(js_content["transferid"].as_string());
+                CllectMoney((wchar_t*) transferid.c_str(), (wchar_t* )wxid.c_str());//transferid
+                break;
+            }
+            case 10: {//同意加好友
+
+                std::wstring v3_data = String2WString(js_content["v3_data"].as_string());
+                std::wstring v4_data = String2WString(js_content["v4_data"].as_string());
+                AgreeUserRequest((wchar_t*)v3_data.c_str(), (wchar_t* )v4_data.c_str());
+
+                break;
             }
             default:
                 break;
