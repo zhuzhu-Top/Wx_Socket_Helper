@@ -37,6 +37,8 @@ void AddChatroomMember(wchar_t* chatroomwxid, wchar_t* wxid);
 std::string Get_Group_Mem_Wxid(std::wstring RoomWxid);
 void CllectMoney(wchar_t* transferid, wchar_t* wxid);
 void AgreeUserRequest(wchar_t* v1, wchar_t* v2);
+void Send_Pic(std::wstring wxid, std::wstring pic);
+
 
 void Msg_main();
 
@@ -224,6 +226,16 @@ VOID Receive_Data(SOCKET clientSock)
                 AgreeUserRequest((wchar_t*)v3_data.c_str(), (wchar_t* )v4_data.c_str());
 
                 break;
+            }
+            case 11: {
+                
+               // void Send_Pic(std::wstring wxid, std::wstring pic)
+                
+                std::wstring wxid = String2WString(js_content["wxid"].as_string());
+                std::wstring pic_path = String2WString(js_content["pic_path"].as_string());
+                Send_Pic(wxid, pic_path);
+                break;
+            
             }
             default:
                 break;

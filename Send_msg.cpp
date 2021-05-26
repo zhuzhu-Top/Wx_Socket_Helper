@@ -167,3 +167,56 @@ void SendXmlCard(std::wstring RecverWxid, std::wstring SendWxid, std::wstring Ni
         add esp, 0xC
     }
 }
+
+
+
+void Send_Pic(std::wstring wxid,std::wstring pic) {
+    //std::wstring wxid = L"wxid_4zr616ir6fi122";
+    //std::wstring pic = L"C:/aaaa.jpg";
+
+    WxString pWxid = { 0 };
+    pWxid.pstr = (wchar_t*)wxid.c_str();
+    pWxid.len = wxid.size();
+    pWxid.maxLen = wxid.size() * 2;
+
+    WxString pPic = { 0 };
+    pPic.pstr = (wchar_t*)pic.c_str();
+    pPic.len = pic.size();
+    pPic.maxLen = pic.size() * 2;
+    char CONST_1[4] = { 1 };
+    char buf[0x500] = { 0 };
+
+    //52EF4AB8    E8 93BFFFFF     call WeChatWi.52EF0A50
+
+
+    //52B40000
+    //52C4CB80    53              push ebx;              图片
+    //    52C4CB81    8D85 78FFFFFF   lea eax, dword ptr ss : [ebp - 0x88]
+    //    52C4CB87    C645 FC 09      mov byte ptr ss : [ebp - 0x4] , 0x9
+    //    52C4CB8B    50              push eax; wxid
+    //    52C4CB8C    8D85 B0FCFFFF   lea eax, dword ptr ss : [ebp - 0x350]
+    //    52C4CB92    50              push eax; 1
+    //    52C4CB93    E8 886BF5FF     call WeChatWi.52BA3720
+    //    52C4CB98    8BC8            mov ecx, eax
+    //    52C4CB9A    C645 FC 01      mov byte ptr ss : [ebp - 0x4] , 0x1
+    //    52C4CB9E    E8 FD7D2A00     call WeChatWi.52EF49A0
+    //    52C4CBA3    C645 FC 0A      mov byte ptr ss : [ebp - 0x4] , 0xA
+    //    52C4CBA7    E8 44E81D00     call WeChatWi.52E2B3F0
+
+    DWORD call_1 = getWeChatwinADD() + 0x63720;
+    DWORD call_2 = getWeChatwinADD() + 0x3B49A0;
+    DWORD call_3 = getWeChatwinADD() + 0x2EB3F0;
+    __asm {
+        lea ebx, pPic
+        push ebx
+        lea eax, pWxid
+        push eax
+        lea eax, CONST_1
+        push eax
+        call call_1
+        mov ecx, eax
+        call call_2
+        call call_3
+    }
+
+}
