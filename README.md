@@ -90,7 +90,7 @@
 ```
 例如:
 
-    {"type":13,"wxid":"wxid_4zr616ir6fi122"}
+    {"type":3,"wxid":"wxid_4zr616ir6fi122"}
 
 效果演示:
 
