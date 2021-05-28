@@ -102,6 +102,11 @@
     "wxid":"wxid",
   }
 ```
+
+效果演示:
+![image](https://github.com/zhuzhu-Top/Wx_Socket_Helper/blob/main/Static/add_public.png)
+
+----
 #### 这里还有一些别的个人信息，我只是没有取出来，有需要的话，可以自己看下我的代码去取出来，我写的都挺简单易懂的(太懒了,没办法-_-)
 
 
