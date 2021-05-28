@@ -38,7 +38,7 @@ std::string Get_Group_Mem_Wxid(std::wstring RoomWxid);
 void CllectMoney(wchar_t* transferid, wchar_t* wxid);
 void AgreeUserRequest(wchar_t* v1, wchar_t* v2);
 void Send_Pic(std::wstring wxid, std::wstring pic);
-
+void Add_Public(std::wstring wx_id);
 
 void Msg_main();
 
@@ -236,6 +236,12 @@ VOID Receive_Data(SOCKET clientSock)
                 Send_Pic(wxid, pic_path);
                 break;
             
+            }
+            case 12: {
+                std::wstring wxid = String2WString(js_content["wxid"].as_string());
+                //void Add_Public_333(std::wstring wx_id)
+                Add_Public(wxid);
+                break;
             }
             default:
                 break;
