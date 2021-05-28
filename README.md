@@ -82,18 +82,26 @@
  + 5.  通过wxid获取好友详细信息
 ```javascript
   {
-    "type": 3,
+    "type": 12,
     "wxid":"wxid",
   }
 ```
 例如:
 
-        {"type": 3,"wxid":"wxid_4zr616ir6fi122",}
+    {"type":12,"wxid":"gh_650586eed01c"}
 
 效果演示:
 
 ![image](https://github.com/2826430176/Wx_Socket_Helper/blob/main/Static/wxid%E8%8E%B7%E5%8F%96%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.jpg)
 
+ + 5.  通过wxid关注公众号
+
+```javascript
+  {
+    "type": 3,
+    "wxid":"wxid",
+  }
+```
 #### 这里还有一些别的个人信息，我只是没有取出来，有需要的话，可以自己看下我的代码去取出来，我写的都挺简单易懂的(太懒了,没办法-_-)
 
 
