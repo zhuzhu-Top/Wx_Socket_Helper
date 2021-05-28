@@ -81,10 +81,12 @@
 
  + 5.  通过wxid获取好友详细信息
 ```javascript
+
   {
-    "type": 12,
+    "type": 3,
     "wxid":"wxid",
   }
+
 ```
 例如:
 
@@ -98,9 +100,10 @@
 
 ```javascript
   {
-    "type": 3,
+    "type": 12,
     "wxid":"wxid",
   }
+
 ```
 
 效果演示:
